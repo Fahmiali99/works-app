@@ -2,6 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  images: {
+    domains: [
+      "static.vecteezy.com",
+      "i.pinimg.com",
+      "static.thenounproject.com",
+      "encrypted-tbn0.gstatic.com",
+      "icons.veryicon.com",
+    ],
+  },
   reactStrictMode: true,
 };
 

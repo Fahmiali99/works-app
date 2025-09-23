@@ -20,7 +20,7 @@ function LayoutUser({
     route.back();
   };
   return (
-    <div className="flex justify-center">
+    <div className=" flex justify-center">
       <div className="relative w-[480px] h-screen bg-white flex flex-col shadow border-red-500">
         {visibilityBack && (
           <div className="flex items-center justify-start px-4 h-16 space-x-10">

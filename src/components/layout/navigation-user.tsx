@@ -50,53 +50,59 @@ export default function NavigationUser() {
             position: "relative",
           }}
         >
-          {navbarMenus.map((menu, index) => (
-            <React.Fragment key={menu.name}>
-              {index === fabIndex && (
-                <CenterBox>
-                  <StyledFab
-                    color="error"
-                    aria-label="checkout"
-                    sx={{ backgroundColor: "#ef4444" }}
+          <div className=" flex w-full justify-between p-0">
+            {navbarMenus.map((menu, index) => (
+              <React.Fragment key={menu.name}>
+                {index === fabIndex && (
+                  <CenterBox>
+                    <StyledFab
+                      color="error"
+                      aria-label="checkout"
+                      sx={{ backgroundColor: "#ef4444" }}
+                    >
+                      <Icon
+                        icon="mdi:logout"
+                        width={28}
+                        height={28}
+                        className="text-white"
+                      />
+                    </StyledFab>
+                    <span
+                      className="text-xs mt-0 font-medium"
+                      style={{ color: "#ef4444" }}
+                    >
+                      Check Out
+                    </span>
+                  </CenterBox>
+                )}
+                <Link href={menu.link}>
+                  <IconButton
+                    color="inherit"
+                    sx={{
+                      flexGrow: 1,
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "flex-end",
+                      color: index === 0 ? "#ef4444" : "#a1a1a1",
+                      "&:hover": {
+                        backgroundColor: "transparent",
+                        color: "#ef4444",
+                      },
+                    }}
                   >
                     <Icon
-                      icon="mdi:logout"
-                      width={28}
-                      height={28}
-                      style={{ color: "white" }}
+                      icon={menu.icon}
+                      width={24}
+                      height={24}
+                      className="mb-1"
                     />
-                  </StyledFab>
-                  <span
-                    className="text-xs mt-0 font-medium"
-                    style={{ color: "#ef4444" }}
-                  >
-                    Check Out
-                  </span>
-                </CenterBox>
-              )}
-              <Link href={menu.link} passHref>
-                <IconButton
-                  color="inherit"
-                  sx={{
-                    flexGrow: 1,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "flex-end",
-                    color: index === 0 ? "#ef4444" : "#a1a1a1",
-                  }}
-                >
-                  <Icon
-                    icon={menu.icon}
-                    width={24}
-                    height={24}
-                    className="mb-1"
-                  />
-                  <span className="text-xs">{menu.name}</span>
-                </IconButton>
-              </Link>
-            </React.Fragment>
-          ))}
+                    <span className="text-xs">{menu.name}</span>
+                  </IconButton>
+                </Link>
+              </React.Fragment>
+            ))}
+          </div>
         </Toolbar>
       </AppBar>
     </React.Fragment>
