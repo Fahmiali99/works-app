@@ -3,3 +3,11 @@
 body {
   background-color: #f9fafb;
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.slick-arrow {
+  display: none !important;
+}
