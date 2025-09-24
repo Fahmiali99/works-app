@@ -23,25 +23,24 @@ function LayoutUser({
     <div className=" flex justify-center">
       <div className="relative w-[480px] h-screen bg-white flex flex-col shadow border-red-500">
         {visibilityBack && (
-          <div className="flex items-center justify-start px-4 h-16 space-x-10">
+          <div className="z-5 flex items-center justify-start px-4 h-16 space-x-10 shadow-[0_2px_4px_-2px_rgba(0,0,0,0.2)]">
             <IconButton onClick={handleBack}>
-              <ArrowBackIcon />
+              <ArrowBackIcon className="text-black" />
             </IconButton>
             <Typography
               variant="h6"
               component="div"
-              sx={{ margin: 0, pl: 1 }}
-              className="text-red-500"
+              className="text-red-500 !font-semibold pl-2"
             >
               {titleBack || null}
             </Typography>
           </div>
         )}
 
-        <main className="flex-1 overflow-y-auto pb-16">{children}</main>
+        <main className="z-0 flex-1 overflow-y-auto pb-16">{children}</main>
 
         {visibilityNavbar && (
-          <div className="absolute bottom-0 left-0 w-full bg-white border-t border-t-gray-300 shadow">
+          <div className="z-5 absolute bottom-0 left-0 w-full bg-white border-t border-t-gray-300 shadow">
             <NavigationUser />
           </div>
         )}
