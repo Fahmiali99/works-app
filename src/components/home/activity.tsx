@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react";
 import styled from "@emotion/styled";
 import Image from "next/image";
 import { format, parseISO } from "date-fns";
+import Link from "next/link";
 const StyledBadge = styled(Badge)({
   "& .MuiBadge-badge": {
     width: 10,
@@ -56,12 +57,14 @@ function Activity() {
       <div className=" flex items-center justify-between py-3">
         <h1 className=" font-bold text-red-500 text-2xl">KerjaYuk!</h1>
         <StyledBadge color="secondary" overlap="circular" variant="dot">
-          <Icon
-            icon="carbon:notification"
-            width={24}
-            height={24}
-            className="text-black"
-          />
+          <Link href="/notification">
+            <Icon
+              icon="carbon:notification"
+              width={24}
+              height={24}
+              className="text-black"
+            />
+          </Link>
         </StyledBadge>
       </div>
       <div>
@@ -111,7 +114,7 @@ function Activity() {
         </div>
       </div>
       <div className="space-y-4">
-        <h1 className="font-semibold">Today's activity</h1>
+        <h1 className="font-semibold">Todays activity</h1>
         <div className="grid grid-cols-3 gap-3">
           {profileActivity.todaysActivity.map((activity, idx) => (
             <div key={idx}>
