@@ -90,3 +90,37 @@ export const onlineUsers = [
       "https://icons.veryicon.com/png/o/miscellaneous/user-avatar/user-avatar-female-9.png",
   },
 ];
+
+export const profileActivity = {
+  user: {
+    name: "Tabay",
+    position: "UI/UX Designer",
+    image:
+      "https://static.vecteezy.com/system/resources/thumbnails/027/951/137/small_2x/stylish-spectacles-guy-3d-avatar-character-illustrations-png.png",
+    memberSince: "2021-06-01",
+  },
+  location: {
+    office: "Kantor Sahid",
+    status: "ICO",
+  },
+  todaysActivity: [
+    {
+      time: "08:30",
+      activity: "Check-in",
+      icon: "tabler:clock-hour-9",
+      status: false,
+    },
+    {
+      time: "03:00:00",
+      activity: "Working Hours",
+      icon: "carbon:rotate-clockwise",
+      status: true,
+    },
+    {
+      time: null,
+      activity: "Check Out",
+      icon: "tabler:stopwatch",
+      status: false,
+    },
+  ],
+};

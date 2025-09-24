@@ -20,7 +20,7 @@ function Online() {
     <div className="relative -bottom-82 md:-bottom-72 pt-0 md:pt-0 pb-20 px-0">
       <h1 className="font-bold text-lg px-6">Online</h1>
       <div className="w-full items-center bg-white p-6">
-        <div className="rounded-3xl shadow-lg p-2 md:p-6 max-w-4xl ">
+        <div className="rounded-3xl shadow-lg border border-gray-100 p-2 md:p-6 max-w-4xl ">
           <div className="flex items-end justify-center -space-x-2 md:-space-x-4">
             {onlineUsers.map((user, idx) => (
               <div

@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 import Image from "next/image";
 import { format, parseISO } from "date-fns";
 import Link from "next/link";
+import { profileActivity } from "@/common/home";
 const StyledBadge = styled(Badge)({
   "& .MuiBadge-badge": {
     width: 10,
@@ -19,50 +20,21 @@ const StyledBadge = styled(Badge)({
 });
 
 function Activity() {
-  const profileActivity = {
-    user: {
-      name: "Tabay",
-      position: "UI/UX Designer",
-      image:
-        "https://static.vecteezy.com/system/resources/thumbnails/027/951/137/small_2x/stylish-spectacles-guy-3d-avatar-character-illustrations-png.png",
-      memberSince: "2021-06-01",
-    },
-    location: {
-      office: "Kantor Sahid",
-      status: "ICO",
-    },
-    todaysActivity: [
-      {
-        time: "08:30",
-        activity: "Check-in",
-        icon: "tabler:clock-hour-9",
-        status: false,
-      },
-      {
-        time: "03:00:00",
-        activity: "Working Hours",
-        icon: "carbon:rotate-clockwise",
-        status: true,
-      },
-      {
-        time: null,
-        activity: "Check Out",
-        icon: "tabler:stopwatch",
-        status: false,
-      },
-    ],
-  };
   return (
     <div className="space-y-6 px-6">
-      <div className=" flex items-center justify-between py-3">
-        <h1 className=" font-bold text-red-500 text-2xl">KerjaYuk!</h1>
+      <div className=" flex items-center justify-between pt-6">
+        <Link href="/">
+          <h1 className=" !font-extrabold font-sans text-red-500 text-2xl">
+            KerjaYuk!
+          </h1>
+        </Link>
         <StyledBadge color="secondary" overlap="circular" variant="dot">
           <Link href="/notification">
             <Icon
               icon="carbon:notification"
-              width={24}
-              height={24}
-              className="text-black"
+              width={26}
+              height={26}
+              className="text-black hover:text-[#F05252] !font-semibold"
             />
           </Link>
         </StyledBadge>
