@@ -1,4 +1,5 @@
 import { onlineUsers } from "@/common/home";
+import Image from "next/image";
 import React from "react";
 
 function Online() {
@@ -31,8 +32,10 @@ function Online() {
                     colorPalette[idx % colorPalette.length]
                   } rounded-full flex items-center justify-center border-2 border-white shadow-lg relative overflow-hidden`}
                 >
-                  <img
+                  <Image
                     src={user.images}
+                    width={56}
+                    height={56}
                     alt={user.name}
                     className="w-full h-full object-cover rounded-full"
                   />
