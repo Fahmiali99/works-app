@@ -47,7 +47,7 @@ function PcsNewsSlider({ data }: { data: INews[] }) {
       <Slider {...settings} initialSlide={initialIndex}>
         {data.map((item, idx) => (
           <div key={idx} className="px-2 py-6">
-            <div className="rounded-2xl shadow-lg  p-4 h-full">
+            <div className="rounded-2xl shadow-lg border border-gray-100  p-4 h-full">
               <div className="flex justify-between items-start mb-2">
                 <div className="flex items-center gap-3">
                   <Image
